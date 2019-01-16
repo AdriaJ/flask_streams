@@ -12,7 +12,7 @@ def index():
 
 @app.route('/stream')
 def stream():
-    return Response(text_stream())
+    return Response(text_stream(), mimetype='text/plain')
 #    return(Response(kafkastream(), mimetype='multipart/x-mixed-replace; boundary=frame'))
 #	mimetype='text/plain')
 #                    mimetype='multipart/x-mixed-replace; boundary=frame')
@@ -21,6 +21,10 @@ def text_stream():
     for msg in consumer:
         yield(msg.value.decode('utf-8'))
         yield('\n')
+#    try:
+#        next(consumer)
+#    except StopIteration:
+#        yield("\n\n\nEnd of input stream")
 
 
 if __name__ == '__main__':

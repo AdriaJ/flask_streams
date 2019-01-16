@@ -17,6 +17,10 @@ You should see Jps, Kafka and QuorumPeerMain precesses.
 Go to this git directory and activate virtual environment with 
 source env/bin/activate
 
+sudo apt install python-pip
+pip3 install flask
+pip3 install kafka
+
 Then you can start your kafka work, either with a stream of images or a stream of text.
 In a terminal, run a producer, and in another one run the consumer.
 
