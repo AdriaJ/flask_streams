@@ -27,3 +27,6 @@ producer.py works with video_consumer.py
 Don't forget to link the emitting port of Flask inyour virtual machine (usually localhost:5000) to
 a free port on your local machine with the parameter -L set to <your_port_number>:localhost:5000
 in your SSH connecion command to the VM to see the display locally.
+
+
+Inspired by https://scotch.io/tutorials/build-a-distributed-streaming-system-with-apache-kafka-and-python .
